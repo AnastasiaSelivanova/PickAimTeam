@@ -1,0 +1,146 @@
+.wrapLoading{
+	background-color: #010101;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex:  0 0 auto;
+	position: relative;
+	overflow:  hidden;
+}
+.textLoading{
+	color: aliceblue;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+.textLoading-main{
+	font-family: 'Integral CF';
+	font-weight: bold;
+	font-size: 150px;
+	overflow: hidden;
+	white-space: nowrap;  
+	margin: 0 auto;  
+	animation:typing 1.5s steps(20, end), blink-caret .7s step-end infinite;
+}
+.textLoading-mini{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	text-align: end;
+	opacity: 0;
+	animation: anim-mini 1.5s steps(30, end) forwards;
+}
+.imgLoading{
+	position: absolute;
+	margin: 0px auto;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+}
+.imgLoading-image{
+}
+.fullLoading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fullLoanding-content{
+	border-radius: 50%;
+	width: 0px; 
+	height: 0px;
+	position:absolute; 
+	animation: anim-full 1.5s 2.5s linear forwards;
+	background-color: #0C0C0C;
+	z-index: 4;
+}
+
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% ; opacity:1;}
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	100% { opacity: 1; }
+}
+
+@keyframes anim-mini {
+	0%{opacity: 0;}
+	99%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes anim-full {
+	0%{width: 0px; height: 0px;}
+	100%{width: 3000px; height: 3000px;}
+}
+
+
+
+@media screen and (max-width: 900px) {
+	.textLoading-main{
+		font-size: 120px;
+	}
+	.textLoading-mini{
+		font-size: 25px;
+	}
+	.imgLoading-image{
+		width: 70%;
+		height: 70%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.textLoading-main{
+		font-size: 100px;
+	}
+	.textLoading-mini{
+		font-size: 20px;
+	}
+	.imgLoading-image{
+		width: 60%;
+		height: 60%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.textLoading-main{
+		font-size: 80px;
+	}
+	.textLoading-mini{
+		font-size: 15px;
+	}
+	.imgLoading-image{
+		width: 50%;
+		height: 50%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.textLoading-main{
+		font-size: 60px;
+	}
+	.textLoading-mini{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.textLoading-main{
+		font-size: 50px;
+	}
+	.textLoading-mini{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 300px) {
+	.textLoading-main{
+		font-size: 35px;
+	}
+	.textLoading-mini{
+		font-size: 10px;
+	}
+}
